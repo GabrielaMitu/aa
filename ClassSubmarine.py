@@ -3,7 +3,6 @@ import random
 from ClassShoot import *
 
 class Submarine(pygame.sprite.Sprite):
-    # Construtor da classe.
     def __init__(self, img, startPosition, xspeed):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load(img).convert_alpha()

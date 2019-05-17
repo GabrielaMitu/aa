@@ -2,8 +2,7 @@ import pygame
 import math
 
 class Ball(pygame.sprite.Sprite):
-    # Construtor da classe.
-    def __init__(self, img, vel, angle, startPosition):
+    def __init__(self, img, vel, angle, startPosition, playerNumber):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load(img).convert_alpha()
         self.rect = self.image.get_rect()
@@ -13,6 +12,7 @@ class Ball(pygame.sprite.Sprite):
         self.angle = angle
         self.xspeed = vel*math.cos(angle)
         self.yspeed = vel*math.sin(angle)
+        self.playerNumber = playerNumber
 
     def move(self):
         self.rect.x += self.xspeed
